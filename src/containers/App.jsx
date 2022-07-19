@@ -5,7 +5,7 @@ import About from "../components/About";
 import Skills from "../components/Skills";
 import Interest from "../components/Interest";
 import Languages from "../components/Languages";
-import getdata from '../utils/getData'
+import getuseData from '../utils/getData';
 
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
     }, []);
 
   const getUserData = async () => {
-    const data = await getData(
+    const data = await getuseData(
       process.env.USER_DATA || 'http://localhost:3000/data');
     setUser(data);
   };
